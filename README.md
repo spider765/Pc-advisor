@@ -1,70 +1,79 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+THIS is the back end
+Here's a clean and professional documentation snippet you can include in your `README.md` or docs for your project:
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 🚀 Getting Started with Smart PC Build Advisor
 
-### `npm start`
+Welcome to the **Smart PC Build Advisor** project! This app helps users generate personalized PC builds based on their budget, brand preferences, and use cases.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 📦 Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project consists of two main parts:
 
-### `npm test`
+* **Rails API (`kluster`)** – Powers the backend and generates the smart PC builds.
+* **React Frontend** – Handles user input and displays build results.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🖥️ Local Development Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Follow these steps to run both servers locally:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 1. Clone Both Repositories
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+# Clone the Rails API
+git clone https://github.com/your-username/kluster.git
 
-### `npm run eject`
+# Clone the React frontend
+git clone https://github.com/your-username/pc-build-advisor-frontend.git
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 2. Run the Rails API
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Navigate to the API folder (`kluster`) and run:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+bundle install
+rails db:setup
+rails server -b 0.0.0.0 -p 4000
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+> This will start the backend server at: `http://localhost:4000`
 
-## Learn More
+### 3. Run the React Frontend
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to the frontend folder (`pc-build-advisor-frontend`) and run:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm install
+npm start
+```
 
-### Code Splitting
+> This will start the frontend server at: `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+---
 
-### Analyzing the Bundle Size
+## 🔗 API Base URL
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+All API requests in the frontend are sent to:
 
-### Making a Progressive Web App
+```
+http://localhost:4000/api
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+This is powered by the `kluster` Rails API.
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🧠 Notes
 
-### Deployment
+* Ensure both servers are running at the same time.
+* If you're using Docker, consider exposing the backend on port 4000 and the frontend on port 3000.
+* Use `.env` files or environment variables to manage base URLs in production.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Let me know if you'd like to add Docker, deploy instructions, or live demo links!

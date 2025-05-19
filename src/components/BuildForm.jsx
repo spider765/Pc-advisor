@@ -188,7 +188,7 @@ const BuildForm = () => {
                                                 <strong>Why:</strong> {buildResult[part]?.reason || 'Not specified'}
                                             </p>
                                             <p>
-                                                <strong>Price:</strong> ${buildResult[part]?.price || '0'}
+                                                <strong>Price:</strong> {buildResult[part]?.price || '0'}
                                             </p>
                                         </div>
                                     </div>
@@ -196,7 +196,7 @@ const BuildForm = () => {
                             ))}
                             <div className="col-md-12">
                                 <div className="alert alert-success text-center fw-bold fs-5">
-                                    💰 Total Estimated Price: ${buildResult.total_price || '0'}
+                                    💰 Total Estimated Price: {buildResult.total_price || '0'}
                                 </div>
                             </div>
                         </div>

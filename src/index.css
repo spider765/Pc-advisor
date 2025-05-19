@@ -1,13 +1,72 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #e1dddb;
+  color: #0a0a0a;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  max-width: 960px;
+}
+
+h2,
+h3 {
+  color: #ab83f1;
+}
+
+input,
+select,
+.form-control,
+.form-select {
+  background-color: #1e1e2f;
+  color: #e1dddb;
+  border: 1px solid #ab83f1;
+}
+
+input::placeholder {
+  color: #aaa;
+}
+
+.card {
+  background-color: #1a1a2e;
+  color: #e1dddb;
+  border: none;
+  border-radius: 1rem;
+}
+
+.card-title {
+  color: #efc75e;
+}
+
+.btn-primary {
+  background-color: #efc75e;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #cfae48;
+}
+
+.btn-outline-dark {
+  border-color: #ab83f1;
+  color: #ab83f1;
+}
+
+.btn-outline-dark:hover {
+  background-color: #ab83f1;
+  color: #000;
+}
+
+.alert-success {
+  background-color: #2f2f44;
+  color: #efc75e;
+  border-color: #efc75e;
+}
+
+.alert-danger {
+  background-color: #441111;
+  color: #ffaaaa;
+  border-color: #cc4444;
 }
